@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+		<title>Miami Stargazers Society</title>
+		<link href="https://cdn.jsdelivr.net/npm/daisyui@2.41.0/dist/full.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		
+	</head>
+	<body>
+		<div class="container mx-auto max-w-8xl p-8 2xl:px-0">
+			<header>
+				<nav class="navbar w-full mb-2 shadow-lg bg-neutral text-neutral-content rounded-box">
+					<div class="flex-none">
+						<button class="btn btn-square btn-ghost">
+							<span class="text-4xl">&#127756;</span>
+						</button>
+					</div>
+					<div class="flex-1 px-2 mx-2">
+						<span class="text-lg font-bold">Miami Stargazers Society</span>
+					</div>
+					<div class="flex-none px-2 mx-2">
+						<input id="date" type="date" class="input input-bordered w-full max-w-xs bg-neutral" />
+					</div>
+					<div class="flex-none">
+						<span class="pr-2 w-8">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+								<path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+							</svg>
+						</span> 
+						<input data-toggle-theme="night,light" type="checkbox" class="toggle toggle-primary" />
+						<span class="pl-2 w-8">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+								<path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+							</svg>
+						</span>
+					</div>
+				</nav>
+			</header>
+
+			<main class="w-full text-center pt-2">			
+				<div class="card bg-base-100 shadow-xl">
+					<h1 class="mb-5 text-5xl font-bold primary-content">Astronomy Picture of the Day</h1>
+					<figure>
+						<img class="hidden" id="apod" src="" alt="" />
+						<iframe class="hidden" src="" frameborder="0"></iframe>
+					</figure>
+					<div class="card-body items-center text-center">
+						<h2 id="title" class="card-title"></h2>
+						<span id="imageDate" class="badge badge-ghost"></span>
+						<p id="desc"></p>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
